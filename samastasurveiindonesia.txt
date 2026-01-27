@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Samasta Survei Indonesia</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header>
+    <div class="logo">Samasta Survei Indonesia</div>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#project">Project</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- HOME -->
+<section id="home" class="hero">
+    <h1>Solusi Profesional Survei & Pemetaan</h1>
+    <p>Surveying • Mapping • Geospatial Solutions</p>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="section">
+    <h2>Tentang Kami</h2>
+    <p>
+        <strong>Samasta Survei Indonesia</strong> adalah perusahaan yang bergerak di bidang jasa survei,
+        pemetaan, dan geospasial. Kami berkomitmen memberikan hasil yang akurat, terpercaya,
+        dan sesuai standar nasional maupun internasional.
+    </p>
+</section>
+
+<!-- PROJECT -->
+<section id="project" class="section gray">
+    <h2>Proyek Kami</h2>
+    <div class="project-list">
+        <div class="project-card">
+            <h3>Survei Topografi</h3>
+            <p>Pemetaan detail untuk perencanaan dan konstruksi.</p>
+        </div>
+        <div class="project-card">
+            <h3>Survei GNSS</h3>
+            <p>Pengukuran koordinat presisi tinggi menggunakan GNSS.</p>
+        </div>
+        <div class="project-card">
+            <h3>Pemetaan GIS</h3>
+            <p>Pengolahan dan visualisasi data spasial.</p>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section">
+    <h2>Hubungi Kami</h2>
+    <form>
+        <input type="text" placeholder="Nama Lengkap" required>
+        <input type="email" placeholder="Email" required>
+        <textarea placeholder="Pesan"></textarea>
+        <button type="submit">Kirim Pesan</button>
+    </form>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>&copy; 2025 Samasta Survei Indonesia. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
