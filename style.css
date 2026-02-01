@@ -1,6 +1,4 @@
-/* =========================
-   GLOBAL RESET
-   ========================= */
+
 *{
   margin:0;
   padding:0;
@@ -136,7 +134,7 @@
 }
 
 /* =========================
-   HAMBURGER BUTTON
+   HAMBURGER
    ========================= */
 .nav-toggle{
   display:none;
@@ -149,7 +147,7 @@
 }
 
 /* =========================
-   RESPONSIVE (TABLET & HP)
+   RESPONSIVE 
    ========================= */
 @media (max-width:768px){
 
@@ -222,7 +220,7 @@
 }
 
 /* =========================
-   EXTRA SMALL DEVICE
+   RESPONSIVE 2
    ========================= */
 @media (max-width:400px){
 
@@ -242,7 +240,7 @@
 
 
 /* =========================
-   HERO SLIDER (FINAL)
+   HERO SLIDER 
    ========================= */
 .hero{
   position:relative;
@@ -358,7 +356,7 @@
 }
 
 /* =========================
-   SECTION GLOBAL
+   SECTION
    ========================= */
 .section{
   padding:60px 30px;
@@ -584,7 +582,7 @@
   .experience-stat-card h3{ font-size:30px; }
 }
 
-/* efek timbul + ketekan untuk card PROJECT */
+
 .experience-project-card{
   cursor: pointer;
   transition: transform .18s ease, box-shadow .18s ease;
@@ -601,11 +599,11 @@
   box-shadow: 0 10px 22px rgba(0,0,0,.12);
 }
 
-/* Judul PROJECT */
+/* JUDUL PROJECT */
 .experience-project-card h3{
-  font-size: 25px;          /* diperbesar */
-  font-weight: 900;         /* lebih tebal */
-  color: #0b3c5d;           /* biru utama */
+  font-size: 25px;          
+  font-weight: 900;        
+  color: #0b3c5d;          
   letter-spacing: 1px;
   margin-bottom: 6px;
 }
@@ -718,7 +716,7 @@ form button:hover{
 }
 
 /* =========================
-   ANIMATIONS (SCROLL/FOOTER)
+   ANIMASI
    ========================= */
 .reveal{
   opacity:0;
@@ -757,7 +755,7 @@ form button:hover{
 .footer-bottom.reveal-footer-item{ transition-delay:.55s; }
 
 /* =========================
-   MODAL + SLIDER (TETAP)
+   MODAL + SLIDER TETAP
    ========================= */
 .modal{
   position:fixed;
@@ -834,7 +832,7 @@ form button:hover{
   }
 }
 
-/* slider di modal */
+
 .slider{
   position:relative;
   margin:14px 0 18px;
@@ -898,7 +896,7 @@ form button:hover{
   .slides{ height:260px; }
 }
 
-/* ===== TEAM MODAL GRID ===== */
+/* ===== TEAM MODAL ===== */
 .team-grid{
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -922,9 +920,9 @@ form button:hover{
   width: 56px;
   height: 56px;
   border-radius: 50%;
-  overflow: hidden;            /* POTONG JADI BULAT */
+  overflow: hidden;            
   flex-shrink: 0;
-  background: #0b3c5d;         /* fallback kalau gambar gagal */
+  background: #0b3c5d;         
   display: flex;
   align-items: center;
   justify-content: center;
@@ -933,7 +931,7 @@ form button:hover{
 .team-avatar img{
   width: 100%;
   height: 100%;
-  object-fit: cover;           /* foto tidak gepeng */
+  object-fit: cover;           
 }
 
 
@@ -978,7 +976,7 @@ form button:hover{
 }
 
 
-/* ===== TEAM CARD (CLICKABLE) ===== */
+/* ===== TEAM CARD ===== */
 .team-card{
   display: flex;
   align-items: center;
@@ -1011,9 +1009,9 @@ form button:hover{
   width: 56px;
   height: 56px;
   border-radius: 50%;
-  overflow: hidden;            /* POTONG JADI BULAT */
+  overflow: hidden;            
   flex-shrink: 0;
-  background: #0b3c5d;         /* fallback kalau gambar gagal */
+  background: #0b3c5d;         
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1022,7 +1020,7 @@ form button:hover{
 .team-avatar img{
   width: 100%;
   height: 100%;
-  object-fit: cover;           /* foto tidak gepeng */
+  object-fit: cover;           
 }
 
 
@@ -1042,7 +1040,7 @@ form button:hover{
 
 /* ===== TEAM DETAIL MODAL ===== */
 .team-detail-modal{
-  max-width: 860px; /* lebih lega */
+  max-width: 860px; 
 }
 
 .team-detail-body{
@@ -1104,11 +1102,11 @@ form button:hover{
   border-radius: 16px;
   padding: 28px 24px;
   width: 320px;
-  text-align: center;                 /* ⬅️ center fallback */
+  text-align: center;                 
   box-shadow: 0 10px 25px rgba(0,0,0,0.08);
   cursor: pointer;
 
-  display: flex;                      /* ⬅️ penting */
+  display: flex;                     
   justify-content: center;
   align-items: center;
 }
@@ -1117,25 +1115,25 @@ form button:hover{
 .experience-project-card .card-text{
   display: flex;
   flex-direction: column;
-  align-items: center;                /* ⬅️ kunci utama */
+  align-items: center;                
   gap: 6px;
   width: 100%;
 }
 
 /* judul */
 .experience-project-card .card-title{
-  font-size: 32px;                    /* sedikit dibesarkan */
+  font-size: 32px;                    
   font-weight: 800;
   color: #0b3c5d;
   margin: 0;
-  text-align: center;                 /* ⬅️ paksa */
+  text-align: center;                 
 }
 
 /* subtitle */
 .experience-project-card .card-subtitle{
   font-size: 15px;
   color: #333;
-  text-align: center;                 /* ⬅️ paksa */
+  text-align: center;                 
 }
 
 .experience-project-card{
@@ -1147,7 +1145,7 @@ form button:hover{
   cursor:pointer;
 
   display:flex;
-  flex-direction:column;     /* ⬅️ ini yang bikin gak jadi kiri-kanan */
+  flex-direction:column;     
   justify-content:center;
   align-items:center;
   text-align:center;
@@ -1333,7 +1331,7 @@ form button:hover{
 }
 
 .team-info{
-  min-width: 0; /* penting supaya wrap rapi */
+  min-width: 0; 
 }
 
 .team-name{
@@ -1381,7 +1379,7 @@ form button:hover{
   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: none; /* akan diaktifkan via JS */
+  display: none; 
 }
 
 .team-detail-avatar span{
@@ -1425,7 +1423,7 @@ form button:hover{
   text-decoration: underline;
 }
 
-/* ================= MODAL BASE (kalau belum ada) ================= */
+/* ================= MODAL BASE  ================= */
 .modal.show{
   display: block;
 }
@@ -1455,6 +1453,7 @@ form button:hover{
   .team-avatar{ width: 52px; height: 52px; flex-basis: 52px; }
   .team-detail-avatar{ width: 56px; height: 56px; flex-basis: 56px; }
 }
+
 
 
 
