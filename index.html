@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
 
-  <!-- WAJIB UNTUK RESPONSIVE -->
+  <!-- RESPONSIVE -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Samasta Survey Indonesia</title>
@@ -31,7 +31,7 @@
    </div>
   </div>
 
-  <!-- tombol hamburger (muncul di HP) -->
+  <!-- HAMBURGER -->
   <button class="nav-toggle" id="navToggle" aria-label="Buka menu" aria-expanded="false">
     &#9776;
   </button>
@@ -89,12 +89,12 @@
 <section id="about" class="about-section">
     <div class="about-container">
 
-        <!-- GAMBAR KIRI -->
+        <!-- GAMBAR -->
         <div class="about-image">
             <img src="about-image.jpeg" alt="Kegiatan Survey Samasta Survey Indonesia">
         </div>
 
-        <!-- TEKS KANAN -->
+        <!-- TEKS -->
         <div class="about-text">
             <h2>Tentang Samasta Survey Indonesia</h2>
             <p>
@@ -132,7 +132,7 @@
   <h3>Survei Topografi</h3>
   <p>Pengukuran dan pemetaan detail permukaan tanah untuk kebutuhan perencanaan, desain, dan konstruksi.</p>
 
-  <!-- DETAIL (tidak tampil di card, tapi dipakai modal) -->
+  <!-- DETAIL -->
   <div class="service-detail" hidden>
     <ul>
       <li>Pengukuran detail situasi dan kontur</li>
@@ -251,7 +251,7 @@
 </div>
 
 
-      <!-- ===== EXPERIENCE CARD (PUNYAMU) ===== -->
+      <!-- ===== EXPERIENCE CARD ===== -->
       <div class="project-card reveal experience-project-card"
         data-title="Our Experience"
         data-desc="Dokumentasi kegiatan kami."
@@ -291,11 +291,10 @@
     <input type="No.HP/WA" name="No.HP/WA" placeholder="No.HP/WA" required>
     <textarea name="pesan" placeholder="Pesan" required></textarea>
 
-    <!-- Opsional: subject email yang masuk -->
+    <!-- Email -->
     <input type="hidden" name="_subject" value="Pesan dari Website Samasta Survey Indonesia">
 
-    <!-- Opsional: redirect setelah submit (ganti link ini dengan link GitHub Pages kamu) -->
-    <!-- <input type="hidden" name="_next" value="https://USERNAME.github.io/REPO/thankyou.html"> -->
+    <!-- Link Github Pages -->
 
     <button type="submit">Kirim Pesan</button>
   </form>
@@ -360,7 +359,7 @@
     <h2 id="modalTitle"></h2>
     <p id="modalDesc"></p>
 
-    <!-- TARUH SLIDER DI SINI -->
+    <!-- JS SLIDER -->
 <div class="slider" id="modalSlider">
   <button class="slider-btn prev" type="button" aria-label="Sebelumnya">&#10094;</button>
   <div class="slides" id="modalSlides"></div>
@@ -399,7 +398,7 @@
     observer.observe(reveal);
   });
 
-  // ✅ observe footer animasi
+  // observe footer animasi
   document.querySelectorAll(".reveal-footer, .reveal-footer-item").forEach((el) => {
     observer.observe(el);
   });
@@ -421,7 +420,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const captionEl = document.getElementById("modalSlideCaption");
 
   let currentIndex = 0;
-  let currentSlides = []; // [{img, cap}]
+  let currentSlides = []; 
 
   function updateCaption() {
     if (!captionEl) return;
@@ -481,14 +480,14 @@ document.addEventListener("DOMContentLoaded", () => {
     modalDesc.textContent = card.dataset.desc || "";
     modalDetail.innerHTML = card.querySelector(".service-detail")?.innerHTML || "";
 
-    // Prioritas: data-slides (Experience)
+    // Data Slides (Experience)
     let slides = [];
     const raw = card.getAttribute("data-slides");
     if (raw) {
       try { slides = JSON.parse(raw); } catch (e) { slides = []; }
     }
 
-    // Fallback: layanan lama (data-img1/2/3)
+    // Fallback: Layanan Lama
     if (!slides.length) {
       const imgs = [card.dataset.img1, card.dataset.img2, card.dataset.img3].filter(Boolean);
       slides = imgs.map(src => ({ img: src, cap: "" }));
@@ -507,7 +506,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.body.style.overflow = "";
   }
 
-  // ✅ klik layanan + klik experience project (BUKAN statistik)
+  
   document.querySelectorAll(".service-card, .experience-project-card").forEach(card => {
     card.addEventListener("click", () => openModal(card));
   });
@@ -529,7 +528,7 @@ document.addEventListener("DOMContentLoaded", () => {
     navToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
   });
 
-  // opsional: kalau klik salah satu menu, dropdown auto nutup
+ 
   navMenu.querySelectorAll("a").forEach(a => {
     a.addEventListener("click", () => {
       navMenu.classList.remove("open");
@@ -592,7 +591,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 </script>
 
-<!-- ================= TEAM MODAL ================= -->
+<!-- TEAM MODAL -->
 <div class="modal" id="teamModal" aria-hidden="true">
   <div class="modal-overlay" data-close="teamModal"></div>
 
@@ -714,7 +713,7 @@ document.addEventListener("DOMContentLoaded", () => {
   </div>
 </div>
 
-<!-- ================= TEAM DETAIL MODAL ================= -->
+<!-- TEAM DETAIL MODAL -->
 <div class="modal" id="teamDetailModal" aria-hidden="true">
   <div class="modal-overlay" data-close="teamDetailModal"></div>
 
@@ -780,7 +779,7 @@ document.addEventListener("DOMContentLoaded", () => {
     modal.classList.remove("show");
     modal.setAttribute("aria-hidden", "true");
 
-    // kalau masih ada modal lain yang open, jangan balikin scroll dulu
+    
     const anyOpen = document.querySelector(".modal.show");
     if(!anyOpen) document.body.style.overflow = "";
   }
@@ -796,7 +795,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const linkedin = (card.dataset.linkedin || "").trim();
     const phone = (card.dataset.phone || "").trim();
 
-    // Photo + initials fallback
+   
     const img = document.getElementById("teamDetailPhoto");
     const initEl = document.getElementById("teamDetailInitials");
 
@@ -847,7 +846,7 @@ if (!certs || certs === "-") {
 }
 
 
-    // Klikable links
+    // Klik Links
     const linkedInWrap = document.getElementById("teamDetailLinkedInWrap");
     const phoneWrap = document.getElementById("teamDetailPhoneWrap");
 
@@ -867,20 +866,20 @@ if (!certs || certs === "-") {
   }
 
   document.addEventListener("DOMContentLoaded", () => {
-    // 1) Klik card TEAM (di section experience) => buka list team
+    // 1) Klik Card Team
     const openTeamBtn = document.getElementById("openTeam");
     if(openTeamBtn){
       openTeamBtn.addEventListener("click", () => openModal("teamModal"));
     }
 
-    // 2) Close modal (overlay + tombol X + tombol tutup)
+    // 2) Close Modal
     document.addEventListener("click", (e) => {
       const closeBtn = e.target.closest("[data-close]");
       if(!closeBtn) return;
       closeModal(closeBtn.getAttribute("data-close"));
     });
 
-    // 3) Klik anggota di list => buka detail
+    // 3) Klik Anggota List
     document.addEventListener("click", (e) => {
       const member = e.target.closest("#teamModal .team-card");
       if(!member) return;
@@ -889,7 +888,7 @@ if (!certs || certs === "-") {
       openModal("teamDetailModal");
     });
 
-    // 4) Keyboard: Enter/Space pada card anggota
+    // 4) Keyboard Pada Card Anggota
     document.addEventListener("keydown", (e) => {
       const active = document.activeElement;
       const isMember = active && active.classList && active.classList.contains("team-card");
@@ -916,6 +915,7 @@ if (!certs || certs === "-") {
 
 </body>
 </html>
+
 
 
 
